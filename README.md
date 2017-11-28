@@ -1,2 +1,2 @@
-# Reconfigurable-Neural-Network
+# Reconfigurable Neural Network
 Реализация реконфигурируемой нейронной сети и метода анализа выходов нейронов
