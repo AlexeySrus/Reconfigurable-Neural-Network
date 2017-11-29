@@ -52,9 +52,17 @@ for (auto i = 0; i < N; ++i) {
 	int err = Model.educate(train_X[i], train_Y[i]);
 	if (err) {
 		//Обработка ошибки
+		//В случае успешного завершения все метода возвращают 0 (EXIT_SUCCESS)
 		.....
 	}
 }
+```
+##### Работа `NeuralModel`
+```c++
+vector<double> input(12);
+vector<double> output(2);
+
+int err = Model.educate(input, output);
 ```
 Стоит отметить, что в классах `NeuralNetwork` и `NeuralModel` есть методы, возвращающие код коследней ошибки и строку типа `std::string` с её кратким описанием.
 ```c++
@@ -83,4 +91,7 @@ for (auto i = 0; i < analysis_res.size(); ++i){
     cout << endl;
 }
 ```
+---
+	/ReconfigurableNN/NeuralModel.hpp
+Содержит реализацию самореконфигурируемой нейронной сети. Класс `ReconfigurableNeuralNetwork` наследуется от класса `NeuralModel`, поэтому методы обучения и работы остаются такие же.
 ---
