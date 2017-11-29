@@ -65,16 +65,12 @@ string err_string = Model.get_last_error_str();
 ```c++
 //Запись в файл
 ofstream file("neualnetwork.nn");
-
 file << Model;
-	
 file.close();
 
 //Чтение с файла
 ifstream nn_file("neualnetwork.nn");
-
 nn_file >> Model;
-
 file.close();
 ```
 ---
