@@ -57,4 +57,8 @@ for (auto i = 0; i < N; ++i) {
 }
 ```
 Стоит отметить, что в классах `NeuralNetwork` и `NeuralModel` есть методы, возвращающие код коследней ошибки и строку типа `std::string` с её кратким описанием.
+```c++
+int err = Model.get_last_error();
+string err_string = Model.get_last_error_str();
+```
 ---
