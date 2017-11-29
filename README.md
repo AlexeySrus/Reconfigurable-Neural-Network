@@ -22,4 +22,5 @@ const double FALSE_VALUE = -1000.0;
 ---
      /neural_network_lib/NeuralModel.hpp
 Содержит более удобный в использовании класс `NeuralModel`.
-###### Пример использования конструктора класса `NeuralModel`
+##### Пример использования конструктора класса `NeuralModel`
+---
