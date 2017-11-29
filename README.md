@@ -69,7 +69,7 @@ int err = Model.educate(input, output);
 int err = Model.get_last_error();
 string err_string = Model.get_last_error_str();
 ```
-Для класса `NeuralModel` перегруженны операции записи и чтения с потока.
+Для класса `NeuralModel` перегружены операции записи и чтения с потока.
 ```c++
 //Запись в файл
 ofstream file("neualnetwork.nn");
