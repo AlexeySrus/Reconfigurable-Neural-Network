@@ -45,7 +45,7 @@ for (auto& i : train_X)
 	i.assign(12, ...);	
 	
 for (auto& i : train_Y)
-	i.assign(12, ...);
+	i.assign(2, ...);
 
 //Процесс обучения
 for (auto i = 0; i < N; ++i) {
@@ -60,5 +60,21 @@ for (auto i = 0; i < N; ++i) {
 ```c++
 int err = Model.get_last_error();
 string err_string = Model.get_last_error_str();
+```
+Для класса `NeuralModel` перегруженны операции записи и чтения с потока.
+```c++
+//Запись в файл
+ofstream file("neualnetwork.nn");
+
+file << Model;
+	
+file.close();
+
+//Чтение с файла
+ifstream nn_file("neualnetwork.nn");
+
+nn_file >> Model;
+
+file.close();
 ```
 ---
