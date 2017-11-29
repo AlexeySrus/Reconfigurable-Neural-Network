@@ -154,5 +154,5 @@ set(HEADERS ${FUNC_HEADER} ${NN_HEADER} ${NN_MODEL_LIBRARY} ${RECNN_HEADER})
 set(SOURCE_LIBS ${FUNC_LIBRARY} ${NN_LIBRARY} ${NN_MODEL_LIBRARY} ${RECNN_LIBRARY})
 
 set(SOURCE_FILES ${SOURCE_LIBS} your_main.cpp)
-add_executable(your_project ${SOURCE_FILES} ${HEADERS} dump_lib.h)
+add_executable(your_project ${SOURCE_FILES} ${HEADERS})
 ```
