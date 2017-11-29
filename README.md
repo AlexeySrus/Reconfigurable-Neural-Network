@@ -94,4 +94,3 @@ for (auto i = 0; i < analysis_res.size(); ++i){
 ---
 	/ReconfigurableNN/NeuralModel.hpp
 Содержит реализацию самореконфигурируемой нейронной сети. Класс `ReconfigurableNeuralNetwork` наследуется от класса `NeuralModel`, поэтому методы обучения и работы остаются такие же.
----
