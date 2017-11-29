@@ -132,7 +132,7 @@ pair<double, double> res = funclib::grad_min_max_of_func<double>({ { 0, PI } },
 * Пример `Cmake` файла для сборки библеотеки:
 ```cmake
 cmake_minimum_required(VERSION 3.8)
-project(tcpdump_checker)
+project(your_project)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -153,6 +153,6 @@ set(RECNN_LIBRARY "../ReconfigurableNN/reconfigurable_nn.cpp")
 set(HEADERS ${FUNC_HEADER} ${NN_HEADER} ${NN_MODEL_LIBRARY} ${RECNN_HEADER})
 set(SOURCE_LIBS ${FUNC_LIBRARY} ${NN_LIBRARY} ${NN_MODEL_LIBRARY} ${RECNN_LIBRARY})
 
-set(SOURCE_FILES ${SOURCE_LIBS} tcpdump_checker.cpp dump_lib.cpp)
-add_executable(tcpdump_checker ${SOURCE_FILES} ${HEADERS} dump_lib.h)
+set(SOURCE_FILES ${SOURCE_LIBS} your_main.cpp)
+add_executable(your_project ${SOURCE_FILES} ${HEADERS} dump_lib.h)
 ```
