@@ -131,5 +131,28 @@ pair<double, double> res = funclib::grad_min_max_of_func<double>({ { 0, PI } },
 * Данные библиотеки требуют компиляции под стандарт `C++17`, т.к. в них были использованны *inline*-переменные
 * Пример `Cmake` файла для сборки библеотеки:
 ```cmake
+cmake_minimum_required(VERSION 3.8)
+project(tcpdump_checker)
 
+set(CMAKE_CXX_STANDARD 17)
+
+set(CMAKE_CXX_FLAGS -O3)
+
+set(NN_LIBRARY "../neural_network_lib/neural_network.cpp")
+set(NN_MODEL_LIBRARY "../neural_network_lib/NeuralModel.cpp")
+
+set(NN_MODEL_HEADER "../neural_network_lib/NeuralModel.cpp")
+set(NN_HEADER "../neural_network_lib/neural_network.hpp")
+
+set(FUNC_HEADER "../FindMinMaxFunc/functional_lib.h")
+set(FUNC_LIBRARY "../FindMinMaxFunc/functional_lib.cpp")
+
+set(RECNN_HEADER "../ReconfigurableNN/reconfigurable_nn.hpp")
+set(RECNN_LIBRARY "../ReconfigurableNN/reconfigurable_nn.cpp")
+
+set(HEADERS ${FUNC_HEADER} ${NN_HEADER} ${NN_MODEL_LIBRARY} ${RECNN_HEADER})
+set(SOURCE_LIBS ${FUNC_LIBRARY} ${NN_LIBRARY} ${NN_MODEL_LIBRARY} ${RECNN_LIBRARY})
+
+set(SOURCE_FILES ${SOURCE_LIBS} tcpdump_checker.cpp dump_lib.cpp)
+add_executable(tcpdump_checker ${SOURCE_FILES} ${HEADERS} dump_lib.h)
 ```
