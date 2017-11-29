@@ -39,11 +39,20 @@ NeuralModel Model2();
 ```c++
 //Заполнение обучающей выбоки, размер каждого вектора должен совпадать с размерностью входа НС
 vector<vector<double> > train_X(N), train_Y(N);
+
 for (auto& i : train_X)
 	i.assign(12, ...);	
+	
 for (auto& i : train_Y)
 	i.assign(12, ...);
 
-
+//Процесс обучения
+for (auto i = 0; i < N; ++i) {
+	int err = Model.educate(train_X[i], train_Y[i]);
+	if (err != 0){
+		//Обработка ошибки
+		.....
+	}
+}
 ```
 ---
