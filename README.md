@@ -75,7 +75,7 @@ file.close();
 ```
 ##### Пример использования метода анализа нейронной сети `NeuralModel::analysis_layers_output`
 ```c++
-vector<vector<pair<double, double> > > analysis_res = M.analysis_layers_output(nn_inputs);
+vector<vector<pair<double, double> > > analysis_res = Model.analysis_layers_output(nn_inputs);
 
 for (auto i = 0; i < analysis_res.size(); ++i){
     for (auto j = 0; j < analysis_res[i].size(); ++j)
