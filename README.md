@@ -106,4 +106,16 @@ int err = RNN.fit(DEFAULT_TRAPEZE<5>, 0.15);
 
 ---
 	/FuncAnalyze/functional_lib.h
-Библеотека, содержащая функции для нахождения минимума и максимума функций в заданной области.
+Данная библеотека содержит функции для нахождения минимума и максимума функций в заданной области.
+##### Пример нахождения минимума и максимума двумерной функции в заданной области
+```c++
+auto res = funclib::grad_min_max_of_multidimensional_func<double>({ { -0.3, 1 },{ -0.3, 1 } },
+	[&](const vector<double>& v) {
+		double x = *v.begin(), y = *v.rbegin();
+		return vector<double>({ cos(sin(x))*x, exp(cos(y)) });
+	},
+		1E-2, 1E-5, 10);
+
+	for (auto& i : res)
+		cout << i.first << " " << i.second << endl;
+```
