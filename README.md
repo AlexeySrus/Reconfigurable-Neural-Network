@@ -50,7 +50,7 @@ for (auto& i : train_Y)
 //Процесс обучения
 for (auto i = 0; i < N; ++i) {
 	int err = Model.educate(train_X[i], train_Y[i]);
-	if (err != 0){
+	if (err) {
 		//Обработка ошибки
 		.....
 	}
