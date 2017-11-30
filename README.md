@@ -117,8 +117,8 @@ auto res = funclib::grad_min_max_of_multidimensional_func<double>({ { -0.3, 1 },
 	},
 		1E-2, 1E-5, 10);
 
-	for (auto& i : res)
-		cout << i.first << " " << i.second << endl;
+for (auto& i : res)
+	cout << i.first << " " << i.second << endl;
 ```
 ##### Пример нахождения минимимума и максимума `cos(x)` на отрезке `[0..Pi]`
 ```c++
