@@ -129,6 +129,7 @@ pair<double, double> res = funclib::grad_min_max_of_func<double>({ { 0, PI } },
 ---
 ## Примечания
 * Данные библиотеки требуют компиляции под стандарт `C++17`, т.к. в них были использованны *inline*-переменные
+* Пример использования `ReconfigurableNeuralNetwork` на задаче обработки данных можно посмотреть в `example_titanic_task/`
 * Пример `Cmake` файла для сборки библеотеки:
 ```cmake
 cmake_minimum_required(VERSION 3.8)
