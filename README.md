@@ -20,7 +20,7 @@ const double TRUE_VALUE = 1000.0;
 const double FALSE_VALUE = -1000.0;
 ```
 ---
-     /neural_network_lib/
+     /neural_network_lib/NeuralModel
 Содержит более удобный в использовании класс `NeuralModel`.
 ##### Пример использования конструктора класса `NeuralModel`
 ```c++
