@@ -62,7 +62,7 @@ for (auto i = 0; i < N; ++i) {
 vector<double> input(12);
 vector<double> output(2);
 
-int err = Model.educate(input, output);
+int err = Model.evaluate(input);
 ```
 Стоит отметить, что в классах `NeuralNetwork` и `NeuralModel` есть методы, возвращающие код последней ошибки и строку типа `std::string` с её кратким описанием.
 ```c++
