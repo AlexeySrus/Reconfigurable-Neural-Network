@@ -83,7 +83,7 @@ int main(int argc, char** argv) {
 
     inp_file.close();
 
-    string title = *file_strings.begin();
+    vector<string> title = line_processing(*file_strings.begin(), ',');
 
     file_strings.erase(file_strings.begin());
 
@@ -105,7 +105,7 @@ int main(int argc, char** argv) {
 
     for (auto i = 0; i < n_colms; ++i)
         if (in_set(columns_values[i], string("")))
-            cout << "В колонке " << i << " есть пустые значения" << endl;
+            cout << "В колонке \"" << title[i] << "\" есть пустые значения" << endl;
 
     vector<vector<double> > table_in_double(table_in_strs.size());
     vector<vector<double> > results(table_in_strs.size());
@@ -209,8 +209,6 @@ int main(int argc, char** argv) {
             cout << "[" << analysis_res[i][j].first << ", " << analysis_res[i][j].second << "] ";
         cout << endl;
     }
-
-
 
     return EXIT_SUCCESS;
 }
