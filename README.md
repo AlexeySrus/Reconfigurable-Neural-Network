@@ -157,3 +157,4 @@ set(SOURCE_LIBS ${FUNC_LIBRARY} ${NN_LIBRARY} ${NN_MODEL_LIBRARY} ${RECNN_LIBRAR
 set(SOURCE_FILES ${SOURCE_LIBS} your_main.cpp)
 add_executable(your_project ${SOURCE_FILES} ${HEADERS})
 ```
+- <img src="https://latex.codecogs.com/gif.latex?O_t=\text { Onset event at time bin } t " /> 
